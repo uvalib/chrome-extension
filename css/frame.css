@@ -1,0 +1,387 @@
+:root {
+    --uva-blue: #232d4b;
+    --uva-orange: #e57200;
+    --uva-blue-border: 3px solid #232d4b;
+    --uva-orange-border: 1.5px solid #e57200;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 0px !important;
+    margin-right: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+    height: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+}
+
+.content-box {
+    height: 80px;
+    border: var(--uva-blue-border);
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-box {
+    height: 80px;
+    width: 100px;
+    background-color: var(--uva-blue);
+    order: 0;
+}
+
+.icon-image {
+    display: block;
+    height: 60px;
+    width: 60px;
+    /*margin-left: 40px;*/
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.closeFrame {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: var(--uva-blue);
+    font-size: 18px;
+    border: none;
+}
+
+.item-image {
+    margin-left: 50px;
+    height: 65px;
+    width: auto;
+    box-shadow: 2px 2px 5px grey;
+    order: 1;
+}
+
+.item-image2 {
+    margin-left: 50px;
+    height: 65px;
+    width: auto;
+    box-shadow: 2px 2px 5px grey;
+    order: 2;
+}
+
+.item-details {
+    margin-left: 20px;
+    line-height: 180%;
+    width: 100%;
+    order: 2;
+}
+
+.item-title-resource {
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+.item-title .short-title {
+    color: var(--uva-blue);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+    display: none;
+}
+
+.item-title .full-title {
+    color: var(--uva-blue);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+@media (max-width: 1200px) {
+    .item-title .short-title {
+        display: inline-block;
+    }
+    .item-title .full-title {
+        display: none;
+    }
+}
+
+.item-title:hover {
+    opacity: 0.8;
+}
+
+.request-purchase {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2px;
+    height: 30px;
+    width: auto;
+    order: 3;
+    display: none;
+}
+
+.more-items-box {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 70px;
+    width: 150px;
+    border: 1px solid var(--uva-blue);
+    order: 3;
+    display: flex;
+    background: #fff;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.more-items-head {
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+}
+
+.more-items-text {
+    width: 100px;
+    margin: auto 2px auto 0px;
+    font-size: 12px;
+    color: var(--uva-blue);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 48px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.more-items-image {
+    height: 45px;
+    margin-top: 1px;
+    align-self: center;
+}
+
+.view-more-button {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    justify-content: flex-end;
+    background-color: #F3F3F3;
+    opacity: 1;
+    text-align: center;
+    font-weight: 700;
+    border-top: 1px solid #D5DBDB;
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    height: 19px;
+}
+
+.additional-items {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    widows: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    /* margin-left: 10%; */
+}
+
+.additional-image {
+    max-height: 100px;
+    border-radius: 5px;
+    margin-right: 5px;
+    /* align-self: center; */
+}
+
+.additional-details {
+    line-height: 180%;
+    width: 80%;
+}
+
+.additional-item-details {
+    background-color: var(--uva-blue) !important;
+    width: 130vh !important;
+    /* width: 200px; */
+    display: flex;
+    flex-direction: row;
+    border: 2px solid var(--uva-blue);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 2%;
+    align-content: center;
+    align-items: center;
+}
+
+.additional-item-details:hover {
+    transition: all 0.3s ease-out !important;
+    box-shadow: 0px 4px 8px var(--uva-blue) !important;
+    top: -4px !important;
+    border: 1px solid #cccccc !important;
+}
+
+.textColor {
+    color: var(--uva-blue) !important;
+}
+
+.meta {
+    opacity: 0.7;
+}
+
+.whiteColor {
+    color: white !important;
+}
+
+
+/* .whiteColor:hover{
+    color: var(--uva-blue) !important;
+} */
+
+#closeViewMoreFrame {
+    cursor: pointer;
+}
+
+
+/*
+.additional-item-details {
+    width: 25%;
+    align-content: center;
+    align-items: center;
+}
+*/
+
+.backButton {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    color: var(--uva-blue);
+    font-size: 18px;
+}
+
+.purchaseRequestContent {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 6px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 30%;
+    padding: 6px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--uva-blue);
+    color: white;
+    padding: 6px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #e57200;
+}
+
+iframe {
+    overflow: scroll;
+}
+
+
+/*Source https://www.w3schools.com/css/css_tooltip.asp
+*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* changes the background of the view-more section */
+
+#viewMoreFrameBody {
+    background-color: white;
+}
+
+
+/* changes the background of the purchase btn when hovered */
+
+#request-purchase:hover {
+    background-color: var(--uva-blue) !important;
+}
+
+.leoHover:hover {
+    background-color: var(--uva-blue)!important;
+    border: 1px solid white !important;
+}
+
+.carousel-indicators {
+    background-color: var(--uva-blue);
+    bottom: -20px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: #ccc;
+    color: var(--uva-blue);
+}

@@ -1,0 +1,46 @@
+
+
+body{
+    height:400px;
+}
+
+.selectionblock{
+    display:inline-block;
+    width:80%;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+
+#optionswrapper{
+    margin-left:10px;
+}
+
+button{
+    background-color: white;
+    color: var(--uva-blue);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom:5px;
+}
+
+label{
+    margin:2px;
+    padding:2px;
+    list-style-type: none;
+    float: left;
+    font-size: 15px;
+    color: white;
+    overflow: hidden;
+    white-space: normal;
+}
+
+#optionsmenuheader{
+    color:white;
+}
+
+#status{
+    color:white;
+    margin-top:5px;
+}

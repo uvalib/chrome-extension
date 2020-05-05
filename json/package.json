@@ -1,0 +1,9 @@
+{
+    "name": "uvalibraryextension",
+    "description": "UVA Library Extension",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "test": "mocha"
+    }
+  }

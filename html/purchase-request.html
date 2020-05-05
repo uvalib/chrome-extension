@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta http-equiv="X-UA-Compatible" content="ie=edge"-->
+    <link rel = "stylesheet" type = "text/css" href = "../css/frame.css">
+    <title>Request Purchase</title>
+</head>
+<body>
+    <button id='closePurchaseRequestFrame' class="closeFrame">&#x2715</button>
+    <button id='backToViewMore' class="backButton" style="border: none;">&#x2190</button>
+    <div class="purchaseRequestContent">
+        <center><h2>Purchase Request Form</h2></center>
+        <button id="authorize_button" style="display: none;">Authorize</button>
+        <button id="signout_button" style="display: none;">Sign Out</button>
+        <form name="request-form">
+            Title*: <input type="text" name="title" id="title" required><br>
+            Author*: <input type="text" name="author" id="author" required><br>
+            Publisher*: <input type="text" name="publisher" id="publisher" required><br>
+            Format:   
+            <select id="format">
+                <option value="Book">Book</option>
+                <option value="eBook">eBook</option>
+                <option value="Video">Video</option>
+                <option value="Dissertation">Dissertation</option>
+                <option value="Music recoding">Music recoding</option>
+            </select><br>
+            <div class="tooltip">Is this a Course Reserve*? 
+                <span class="tooltiptext">The reserves service at the University of Virginia Library provides access to essential curriculum materials that are supplementary to the required texts or that are difficult for students to acquire</span>
+            </div>
+            <select id="is-course-reserve" required>
+                <option value=""></option>
+                <option value="yes">Yes</option>
+                <option value="no">No/Not sure!</option>
+            </select><br>
+            <input type="submit" id="submitRequest" value="Submit">
+        </form>
+    </div>
+    
+    <script src='../js/purchase-request.js'> </script>
+    <script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script> 
+    <script src="test/purchase-request.test.js"></script>
+</body>
+</html>

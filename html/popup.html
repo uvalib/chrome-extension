@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../js/semantic/semantic.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "../css/style_options.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "../css/styles.css"/>
+    <title>UVA Library</title>
+</head>
+<body>
+    <div class="scrolling content">
+        <!-- Search Content !-->
+        <div class="ui icon input" style="margin-top:3vh;margin-left:7vh">
+            <input list="match-list" oninput type="text" id="searchbar" autocomplete="off" name="search" placeholder = "Search Virgo..."></input>
+            <i class="inverted circular search link icon" id ="searchButton"></i>
+        </div>
+        <!-- Search Dropdown -->
+        <datalist id="match-list"></datalist>
+        <div class="ui brown divider"></div>
+        <!--NAVBAR HTML-->
+        <div id="popupNav">
+            <button class="ui orange icon inverted button popupNavItem" id="itembutton">
+                <i class="table icon"></i>
+                Items
+            </button>
+            <button class="ui orange icon inverted button popupNavItem" id="hisbutton">
+                <i class="history icon"></i>
+                History
+            </button>
+            <button class="ui orange icon inverted button popupNavItem" id="setbutton">
+                <i class="icon cog"></i>
+                Setting
+            </button>
+        </div>
+        <div class="ui brown divider"></div>
+        <!--RECOMMENDED ITEMS HTML-->
+        <div id="rectab">
+            <div class="ui middle aligned animated list" id ="item-list">
+                <!--populated by contents generated in popup-js-->
+            </div>
+        </div>
+    </div>
+    
+    <!--HISTORY HTML-->
+    <!--Insert content changes here for the history tab-->
+    <div id="histab">
+        <div class="ui center aligned header" style="color: white; text-align: center;">Recently Viewed Items</div>
+        <div id="viewedItems" class="ui middle aligned animated list details">
+        </div>
+        <div class="ui center aligned header" style="color: white; text-align: center;">Recent Search History</div>
+        <div id="searchHistory" class="ui middle aligned animated list details">
+        </div>
+        <button id="clearHistory" class="ui fluid orange floated button">Clear History</button>
+    </div>
+
+    <!--SETTINGS MENU HTML-->
+    <!--Insert content changes here for the settings tab-->
+    <div id="setstab" >
+        <!--header>Options Menu</header-->
+        <div id="optionswrapper">
+            <label class="selectionblock"> 
+                <h3>Search Mode</h3>
+                <p>Select One</p>
+                <input type="checkbox" id="accessmode"> Video Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="articlemode"> Articles Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="raremode"> Rare Book Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="musicrecordingmode"> Music Recordings Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="musicalscoresmode"> Musical Scores Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="journalsmode"> Journals Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="soundrecordingsmode"> Sound Recordings Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="thesesmode"> Theses Mode
+            </label><label class="selectionblock">
+                <input type="checkbox" id="archivalmode"> Archival Mode
+            </label>
+            <label class="selectionblock">
+                <h3>Color Mode</h3>
+                <input type="checkbox" id="lightmode"> Light Mode
+            </label>
+            <label class="selectionblock" style = "display:none;">
+                <input type="checkbox" id="videomode"> Accessibility Mode
+            </label>
+            <div id="status"></div>
+
+
+            <button class="ui red inverted button popupNavItem" id="save">Save</button>
+        </div>
+    </div>
+    <script src = "../js/options.js"></script>
+    <script src = "../js/content.js"></script>
+    <script src = "../js/popup.js"></script>
+    <script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/semantic/semantic.min.js"></script>
+    <script src ="test/content.test.js"></script>
+    <!-- <script src ="test/popup.test.js"></script> -->
+    <script src="test/content-virgo-api.test.js"></script>
+    <script src="test/content-np6hd.test.js"></script>
+    <script src="test/ys2ck-sprint-7-unit-tests.test.js"></script>	
+    <script type="application/javascript" src="../js/options.js"></script>
+</body>
+</html>
